@@ -7,27 +7,27 @@ public class RobotRoute {
     }
 
     private void moveAlongX(Robot robot, int toX) {
-        int DistanceByX = toX - robot.getX();
-        Direction properDirection = (DistanceByX > 0) ? Direction.RIGHT : Direction.LEFT;
+        int distanceByX = toX - robot.getX();
+        Direction properDirection = (distanceByX > 0) ? Direction.RIGHT : Direction.LEFT;
 
         while (robot.getDirection() != properDirection) {
             robot.turnRight();
         }
 
-        for (int i = 0; i < Math.abs(DistanceByX); i++) {
+        for (int i = 0; i < Math.abs(distanceByX); i++) {
             robot.stepForward();
         }
     }
 
     private void moveAlongY(Robot robot, int toY) {
-        int DistanceByY = toY - robot.getY();
-        Direction properDirection = (DistanceByY > 0) ? Direction.UP : Direction.DOWN;
+        int distanceByY = toY - robot.getY();
+        Direction properDirection = (distanceByY > 0) ? Direction.UP : Direction.DOWN;
 
         while (robot.getDirection() != properDirection) {
             robot.turnRight();
         }
 
-        for (int i = 0; i < Math.abs(DistanceByY); i++) {
+        for (int i = 0; i < Math.abs(distanceByY); i++) {
             robot.stepForward();
         }
     }
